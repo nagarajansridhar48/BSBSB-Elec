@@ -90,7 +90,6 @@ export default function AnimatedCards() {
                       style={{ backgroundImage: `url(${item.image})` }}
                       className="absolute inset-0 bg-cover bg-center"
                     />
-
                     <div className="absolute inset-0 bg-black/40" />
 
                     <div className="relative z-10 flex flex-col justify-end h-full p-4">
@@ -102,7 +101,6 @@ export default function AnimatedCards() {
                   </animated.div>
                 ))}
               </div>
-
               {visibleCount < cardsData.length && (
                 <div className="text-center mt-12">
                   <button

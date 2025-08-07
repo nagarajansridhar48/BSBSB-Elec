@@ -9,7 +9,6 @@ import Main_Landing from './pages/Main_Landing';
 
 function App() {
 
-
   return (
     <>
       {/* <Router> */}

@@ -27,7 +27,7 @@ const Exp = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Exp
