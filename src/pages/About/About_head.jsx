@@ -1,57 +1,70 @@
 import React from 'react';
+import assets from '../../assets/about/about_asset';
+import './about.css';
 
 const About_head = () => {
     return (
-        <>
-        {/* first */}
-        <div className="relative min-h-[300px] w-full overflow-hidden">
-            {/* Base gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#f3a933] via-[#f8d56e] to-[#4286b9] opacity-90"></div>
-
-            {/* Diagonal stripes */}
-            <div className="absolute inset-0 opacity-20">
-                <div className="absolute top-0 left-0 w-full h-full bg-repeat bg-[length:40px_40px]"
-                    style={{ backgroundImage: 'linear-gradient(45deg, #000 25%, transparent 25%, transparent 50%, #000 50%, #000 75%, transparent 75%, transparent)' }}>
+        <div className="pb-5">
+            {/* Header Section */}
+            <div className="relative min-h-[450px] w-full overflow-hidden bg-gradient-to-r from-[#4286b9] to-[#f3a933] flex flex-col items-center"
+                data-aos="fade-down">
+                <div className="mt-32 sm:mt-40 text-center px-4 text-gray-900">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold opacity-85"
+                        data-aos="zoom-in">
+                        About Us
+                    </h1>
+                    <p className="mt-2 text-sm sm:text-base md:text-lg"
+                        data-aos="fade-up"
+                        data-aos-delay="300">
+                       We are managed by the masters. We collaborate with tycoons in the industry to deliver the best output. Make meetings easier with us.
+                    </p>
                 </div>
             </div>
 
-            {/* Geometric pattern */}
-            <div className="absolute top-1/4 -left-20 w-64 h-64 bg-[#e6c15c] rounded-full mix-blend-multiply opacity-30"></div>
-            <div className="absolute top-1/3 right-0 w-80 h-80 bg-[#3a7aad] transform rotate-45 mix-blend-multiply opacity-30"></div>
-            <div className="absolute bottom-0 left-1/4 w-96 h-64 bg-[#f3a933] transform -skew-y-12 mix-blend-multiply opacity-20"></div>
-
-            {/* Text elements */}
-            <div className="relative z-10 p-8 text-center">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-wider">
-                    LOREM IFSURD GELOR
-                </h1>
-                <h2 className="text-3xl md:text-5xl font-semibold text-white tracking-widest">
-                    SIT AMET SED DIAM
-                </h2>
+            {/* Image Row */}
+            <div className="relative items-center w-full flex flex-wrap gap-4 -mt-12 sm:-mt-25 justify-center px-4"
+                data-aos="fade-up">
+                {[assets.about1, assets.about2, assets.about3, assets.about4].map(
+                    (img, index) => (
+                        <img
+                            key={index}
+                            src={img}
+                            alt={`about-${index + 1}`}
+                            className={`w-28 sm:w-40 md:w-52 rounded-lg shadow-md ${index % 2 === 0 ? 'image1' : 'image2'
+                                }`}
+                            data-aos="zoom-in"
+                            data-aos-delay={index * 400}
+                        />
+                    )
+                )}
             </div>
 
-            {/* Subtle particles */}
-            <div className="absolute inset-0 overflow-hidden">
-                {[...Array(30)].map((_, i) => (
-                    <div
-                        key={i}
-                        className="absolute rounded-full"
-                        style={{
-                            backgroundColor: i % 3 === 0 ? '#f3a933' : i % 3 === 1 ? '#4286b9' : '#ffffff',
-                            width: `${Math.random() * 10 + 5}px`,
-                            height: `${Math.random() * 10 + 5}px`,
-                            top: `${Math.random() * 100}%`,
-                            left: `${Math.random() * 100}%`,
-                            opacity: Math.random() * 0.4 + 0.1,
-                        }}
-                    ></div>
-                ))}
+            {/* Content Section */}
+            <div className="w-full flex flex-col items-center justify-center mt-20 px-6 md:px-20"
+                data-aos="fade-up">
+                <h1 className="font-semibold text-3xl sm:text-4xl md:text-5xl text-center pb-10"
+                    data-aos="fade-up">
+                   Our Commitment
+                </h1>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-20 w-full px-4 sm:px-6 md:px-8 lg:px-12 py-6">
+                    <div className="w-full md:w-1/2">
+                        <p className="text-justify text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl" data-aos="fade-right">
+                            Make a meeting more easier with us. We are and will always be in
+                            your business by resolving pain products of collaboration. Beat
+                            local audio or video with a specialization in the domain of
+                            immersive video collaboration and learning points.
+                        </p>
+                    </div>
+                    <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                        <p className="text-justify text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl" data-aos="fade-left">
+                            We connect the world on the principle of innovation and
+                            excellence. Giving the personal best experience.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        {/* second */}
+    );
+};
 
-        </>
-    )
-}
-
-export default About_head
+export default About_head;

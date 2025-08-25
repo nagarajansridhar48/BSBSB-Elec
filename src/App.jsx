@@ -16,7 +16,7 @@ function App() {
           <Route path='/' element={<Main_Landing />}>
             <Route index element={<Home_main/>} />
             <Route path='/about' element={<About_main />} />
-            <Route path='/product' element={<Products_main />} />
+            <Route path='/products' element={<Products_main />} />
             <Route path='/contact' element={<Contact_main/>}/>
             <Route path='*' element={<NotFound/>}/>
           </Route>

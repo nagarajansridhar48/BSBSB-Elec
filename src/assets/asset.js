@@ -6,4 +6,5 @@ import Meeting_Rooms from './Meeting_Rooms.jpg';
 import Training_Rooms from './Training_Rooms.jpg';
 import who from './who.jpg'
 
+
 export { logo,banner,experties,Conference_Rooms,Meeting_Rooms,Training_Rooms,who };
